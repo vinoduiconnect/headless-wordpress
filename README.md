@@ -1,2 +1,2 @@
 # headless-wordpress
-WordPress Headless cms
+WordPress Headless cms with Nextjs
