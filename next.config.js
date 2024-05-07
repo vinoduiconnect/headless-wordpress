@@ -21,6 +21,9 @@ module.exports = {
       },
     ],
     domains: ['secure.gravatar.com', 'headlesscms.uicweb.in'],
-    
   },
+  i18n: {
+    locales: ["en", "es", "fr"],
+    defaultLocale: "en",
+  }
 };

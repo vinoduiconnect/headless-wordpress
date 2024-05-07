@@ -59,11 +59,12 @@ export async function getAllPostsWithSlug() {
   return data?.posts;
 }
 
-export async function getAllPostsForHome(preview) {
+export async function getAllPostsForHome(preview, locale) {
+  const language = locale.toUpperCase();
   const data = await fetchAPI(
     `
-    query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+    query AllPosts ($language: LanguageCodeFilterEnum!) {
+      posts(first: 20, where: { orderby: { field: DATE, order: DESC }, language: $language }) {
         edges {
           node {
             title
@@ -94,6 +95,7 @@ export async function getAllPostsForHome(preview) {
       variables: {
         onlyEnabled: !preview,
         preview,
+        language: language
       },
     },
   );
