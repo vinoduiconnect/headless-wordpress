@@ -35,8 +35,9 @@ export default function Index({ allPosts: { edges }, preview }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview);
+export const getStaticProps: GetStaticProps = async ({ preview = false, locale }) => {
+  console.log('Locale:', locale);
+  const allPosts = await getAllPostsForHome(preview, locale);
 
   return {
     props: { allPosts, preview },
