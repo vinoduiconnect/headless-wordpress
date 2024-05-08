@@ -3,6 +3,7 @@ import Date from "./date";
 import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Categories from "./categories";
+import Countries from "./country";
 
 export default function PostHeader({
   title,
@@ -10,6 +11,7 @@ export default function PostHeader({
   date,
   author,
   categories,
+  country,
 }) {
   return (
     <>
@@ -27,6 +29,7 @@ export default function PostHeader({
         <div className="mb-6 text-lg">
           Posted <Date dateString={date} />
           <Categories categories={categories} />
+          <Countries country={country} />
         </div>
       </div>
     </>

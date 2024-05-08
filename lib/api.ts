@@ -70,6 +70,9 @@ export async function getAllPostsForHome(preview, locale) {
             title
             excerpt
             slug
+            country {
+              country
+            }
             date
             featuredImage {
               node {
@@ -126,6 +129,9 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
       title
       excerpt
       slug
+      country {
+        country
+      }
       date
       featuredImage {
         node {

@@ -102,3 +102,109 @@
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
 }
+/* Header css */
+.topmenu-items a{
+  color: #333 !important;
+  padding: 10px 20px;
+  margin: 0 !important;
+}
+.topmenu-items a:hover{
+font-weight: 700;
+  border: none !important;
+  color: #000051 !important;;
+}
+.bottommenu-items li a{
+  color: #333 !important;
+}
+.bottommenu-items a:hover{
+  font-weight: 700;
+    border: none !important;
+    color: #000051 !important;;
+  }
+  .header-btn-a {
+    letter-spacing: .1em;
+    line-height: normal;
+    text-transform: lowercase;
+    text-align: center;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    transition: background .2s, color .2s, border .2s, box-shadow .2s, fill .2s;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 17px 40px;
+    min-width: 200px;
+    box-shadow: 0 0 20px 2px rgba(0, 101, 189, .2);
+    background: #000777;
+    color: #fff;
+    fill: transparent;
+    border-color: transparent;
+}.social-link.slid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 16px !important;
+  margin-right: 20px;
+}.social-links {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+}.social-link:hover .social-links {
+  opacity: 1;
+  visibility: visible;
+  width: 80px;
+}
+.social-link.slid:hover .social-links {
+  margin-left: 30px;
+  max-width: 200px;
+}
+/* Footer css */
+.footer{
+  background-color: #1c1c1c;
+}
+.footer ul li a{
+  color:#9e9e9e !important;
+  
+}
+.footer ul li,.footer h5{
+  text-align:left;
+}
+
+
+@media (max-width: 768px){
+  .topmenu-items,.bottommenu-items,.header-btn-a{
+    display: none;
+  }
+  img{
+    width: 100%;
+  }
+  .footer .copyright{
+    flex-direction: column;
+  }
+  .footer{
+    padding: 0 20px;
+  }
+  .mob-listing img{
+    width: 100px;
+  }
+  .mob-listing a{
+    font-size: 14px;
+  }
+  .mob-listing{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:10px;
+  }
+  .copyright img{
+    width: 50px;
+    height: 50px;
+  }
+  .copyright .mob-logo{
+    width: 80px;
+  }
+  .copyright .mob-text-align{
+    text-align: center;
+  }
+}

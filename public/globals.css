@@ -1,0 +1,1069 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Ranade-Variable';
+  src: url('../public/Assets/fonts/Ranade-Variable.woff2') format('woff2'),
+       url('../public/Assets/fonts/Ranade-Variable.woff') format('woff'),
+       url('../public/Assets/fonts/Ranade-Variable.ttf') format('truetype');
+       font-weight: 100 700;
+       font-display: swap;
+       font-style: normal;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: #F5F2DF !important;
+}
+/* @media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1190px !important;
+}
+} */
+@media (min-width: 990px){
+  .mobileheader,.hand-knotted-rugs-mobile{
+    display: none; 
+  }
+}
+@media (max-width: 990px){
+  .header, .hand-knotted-rugs{
+    display: none;
+  }
+}
+@media (max-width: 768px){
+.header, .hand-knotted-rugs{
+  display: none;
+}
+.carousel-caption h3,.artisanal-alchemy h3, .crafted-chronicles h1,.bespoke-rugs h2, .why-understorey h2,.shoppe-body-content h1,.shoppe-banner-text h1,.perfect-rug h2,.custom-rug-form h2,.company-profile h3, .mission-statement h3 {
+  font-size: 40px !important;
+  line-height: 1.3em !important;
+}
+/* .carousel-caption{
+  bottom: 50% !important;
+} */
+
+.carousel-caption p,.our-team h4,.our-team p,.company-profile p, .mission-statement p, .our-artisans p,.why-bespoke-rug-content p,.custom-rug-form label,.artisanal-alchemy p,.bespoke-rugs-content p,.shoppe-body-content p,.perfect-rug p,.rug-importance p{
+  font-size: 16px !important;
+}
+.company-profile, .mission-statement{
+  padding:0 20px !important;
+}
+.mission-statement{
+  padding-bottom: 50px !important;
+}
+.artisanal-alchemy{
+ padding: 0 !important;
+}
+.carousel-inner{
+  height: 700px !important;
+}
+.carousel-item, .carousel-item img{
+  height: 700px !important;
+}
+.modal-dialog{
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+.modal-body{
+  height: 90vh;
+}
+.btn-close{
+  box-shadow: none !important;
+}
+.custom-rug-form{
+  padding: 0px 20px 50px !important;
+}
+/* .mobileheader .row{
+  gap:60px;
+} */
+.modal-content{
+  border: none !important;
+  border-radius: 0 !important;
+}
+.perfect-rug{
+  padding: 20px 20px 30px !important;
+}
+.artisanal-alchemy-section{
+  padding:0 20px !important;
+}
+.shoppe-body-content, .shoppe-cards,.our-artisans{
+  padding:50px 20px !important;
+}
+.artisanal-alchemy-col{
+  padding-top: 0px !important;
+}
+.bespoke-rugs-content{
+  padding: 20px 0 !important;
+  margin-top: 100px !important;
+}
+.why-understorey-content{
+  padding: 200px 0 100px !important;
+}
+.why-understorey-content ul{
+  display: block !important;
+}
+.why-understorey{
+  height: 700px !important;
+}
+.newsletter-btn{
+  width: 100%;
+  margin-top: 20px;
+}
+.footer-component{
+  padding:50px 10px !important;
+}
+.hand-knotted-rugs h3,.perfect-rug-content h3,.why-bespoke-rug-content h3,.our-artisans h3,.rug-importance h4{
+  font-size: 34px !important;
+  line-height: 1.3em !important;
+}
+.knowledge{
+  padding-top: 20px;
+}
+.perfect-rug-steps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hand-knotted-rugs-mobile h3{
+  color:#032D29;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 1.3em;
+}
+.hand-knotted-rugs-mobile p{
+  color: #000000;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 29px;
+}
+.perfect-rug-content h6{
+  text-align: center;
+  padding-top: 40px;
+  line-height:0px !important;
+}
+.perfect-rug-content h3{
+  text-align: center;
+  line-height:50px !important;
+}
+.perfect-rug-right,.why-bespoke-rug-content-right{
+  flex-flow: column-reverse;
+}
+.perfect-rug-right .perfect-rug-content,.perfect-rug-right p,.why-bespoke-rug-content-right,.why-bespoke-rug-content-right p {
+  text-align: left !important;
+} 
+.why-bespoke-rug .row{
+  padding:10px 0 !important;
+}
+.perfect-rug img{
+  width: 335px !important;
+  max-width: 335px !important;
+  height: 335px !important;
+  border-radius: 333px 333px 333px 333px !important;
+}
+.newsletter{
+padding-top: 0 !important;
+}
+.why-bespoke-rug-content h3{
+  padding-top: 20px;
+}
+.why-bespoke-rug {
+  padding: 0px 20px 10px !important;
+}
+.why-bespoke-rug-content-right .why-bespoke-rug-content{
+  padding: 0 !important;
+}
+.our-team-items{
+  gap: 30px !important;
+}
+.our-team h3{
+  font-size: 24px !important;
+}
+.mobileheader{
+  background: #000000;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+.copyrights{
+  padding-top: 20px;
+  margin: 0;
+}
+.mobileheader svg {
+  width: 24px;
+  height: 20px;
+  margin-left: -20px !important;
+}
+.custom-rug-form h6{
+  padding: 5px 0 !important;
+  font-size: 16px;
+}
+.our-philosophy>h6{
+margin-top: 80px !important;
+
+}
+.why-bespoke-rug-content h6{
+  padding-top: 40px !important;
+}
+.rug-importance {
+  padding: 50px 20px !important;
+}
+.rug-importance-content{
+  padding-top: 20px !important;
+}
+}
+.mobileheader{
+  background: #F5F2DF;
+}
+.mobilepopup h5, .mobilepopup h5 a{
+  color:#AA8B57;
+  font-family: "Ranade", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+.mobilepopup ul li a{
+  font-family: "Ranade", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #000000;
+  text-decoration: none;
+}
+.artisanal-alchemy{
+  padding: 40px 0;
+}
+.artisanal-alchemy-col{
+  padding-top: 50px;
+}
+.card-img, .card-img-top{
+  border-radius: 0 !important;
+}
+  .dropdown a{
+      color:#ffffff !important;
+      font-family: "Ranade", Sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+  }
+  .nav-link{
+    color:#ffffff !important;
+    font-family: "Ranade", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .modal-header{
+    border: none !important;
+  }
+  .header,.mobileheader{
+      background: #000000;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+      z-index: 999;
+  }
+  .dropdown-menu{
+    background: #AA8B57 !important;
+  }
+  .dropdown-item.active, .dropdown-item:active,.dropdown-item:hover {
+    background-color: #000000 !important;
+    color: #AA8B57 !important;
+  }
+  .carousel-inner{
+    height: 100vh !important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+  }
+  .carousel-caption{
+    top: 20% !important;
+  }
+.bespoke-rugs-content{
+  padding: 50px 0;
+}
+.rug-importance-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .carousel-caption h3 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .carousel-caption p{
+    color:#ffffff;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 29px;
+  }
+  .carousel-item{
+    background-color: #00000066;
+  }
+  .artisanal-alchemy{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .artisanal-alchemy h3,.crafted-chronicles h1{
+    color: #032D29;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625em;
+    font-weight: 400;
+    line-height: 110px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .crafted-chronicles p{
+    color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 29px;
+  }
+  .perfect-rug{
+    padding: 30px 0;
+  }
+  .artisanal-alchemy p{
+    color: #000000;
+    /* font-family: 'Ranade-Variable', sans-serif; */
+    font-size: 1.125em;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 29px;
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  .bespoke-rugs{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/UnderStorey_alchemize-your-story_banner.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    max-width:100%;
+}
+.bespoke-rugs h2, .why-understorey h2{
+  color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625rem;
+    font-weight: 400;
+    line-height: 110px;
+}
+.bespoke-rugs-content{
+  background: #032D29;
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 250px;
+  padding: 0 20%;
+}
+.bespoke-rugs-content p{
+  color: #ffffff;
+  
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 29px;
+}
+.bespoke-rugs-content p>a{
+  color:#AA8B57;
+  text-decoration: underline;
+}
+.Kintsugi,.Firstlight,.TheMoirai,.KineticChroma{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    padding-top: 300px;
+}
+.Kintsugi{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/Understorey-Kintsugi-banner3.jpg");
+}
+.Firstlight{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/Understorey_first-light-banner.jpg");
+}
+.TheMoirai{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/Understorey_TheMoirai-banner1.jpg");
+}
+.KineticChroma{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/Understorey_Kinetic-Chroma-banner.jpg");
+}
+.Kintsugi h4,.Firstlight h4,.TheMoirai h4, .KineticChroma h4{
+  color:#ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    text-align: center;
+}
+.Kintsugi h5, .Firstlight h5, .TheMoirai h5, .KineticChroma h5{
+  color: #ffffff;
+    
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-transform: lowercase;
+    text-align: center;
+}
+.why-understorey{
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/Understorey-Homebanner1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    max-width:100%;
+}
+.bespoke-rugs h2{
+
+}
+.why-understorey-content{
+  padding: 300px;
+}
+.why-understorey-content ul li{
+  
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+/* .Kintsugi::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+} */
+.hand-knotted-rugs h3{
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 1.3em;
+}
+.hand-knotted-rugs p{
+    color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 29px;
+}
+.footer-component ul li a{
+  font-family: "Ranade", Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-component h5,.footer-component h5 a{
+  color:#AA8B57;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+.newsletter{
+  padding-top: 30px;
+  margin-top: 50px !important;
+}
+.newsletter-btn, .newsletter-input{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  border-radius: 0 !important;
+}
+.newsletter-input::placeholder{
+  color: #ffffff !important;
+}
+
+.copyrights{
+  /* text-align: center; */
+  color: #ffffff;
+  font-family: "Ranade", Sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+/* mobileheader */
+.mobileheader{
+  background: #000000;
+}
+.huburger-iocn{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+/* shoppe-body-content */
+.shoppe-body-content,.shoppe-cards{
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 80px 0;
+  text-align: center;
+}
+.shoppe-body-content h1{
+  color: #032D29;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625em;
+    font-weight: 400;
+    text-transform: lowercase;
+    line-height: 110px;
+    padding-bottom: 20px;
+}
+.shoppe-body-content p{
+  text-align: center;
+    color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 29px;
+}
+.shoppe-banner-text h1{
+  color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625rem;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.shoppe-banner-text p{
+  color: #ffffff;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: lowercase;
+}
+.shoppe-cards .card-body,.shoppe-cards .card{
+background-color: #F5F2DF!important;
+border: none !important;
+padding: 0;
+}
+.shoppe-cards .card-body .card-title{
+  color: #000000;
+  font-family: "Ranade", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+margin-bottom: 20px;
+    text-align: left;
+}
+.view-collection-btn{
+  font-family: "Ranade", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    fill:#ffffff !important;
+    color:#ffffff !important;
+    border:#AA8B57 !important;
+    background-color:#AA8B57 !important;
+    border-radius: 0px 0px 0px 0px !important;
+    padding: 6px 12px 6px 12px !important;
+}
+.perfect-rug h2{
+  color: #032D29;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.625rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: lowercase;
+}
+.perfect-rug p{
+  color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: lowercase;
+}
+.perfect-rug .row{
+  padding: 10px 0;
+}
+.perfect-rug-content h6{
+  color: #032D29;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 29px;
+}
+.perfect-rug-content h3{
+  color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    line-height: 77px;
+}
+.perfect-rug-content p{
+  color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: left;
+    text-transform: lowercase;
+}
+.perfect-rug img{
+  width: 420px;
+  max-width: 420px;
+  height: 420px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 420px 420px 420px 420px;
+}
+.perfect-rug-right p,.perfect-rug-right ,.why-bespoke-rug-content-right, .why-bespoke-rug-content-right p{
+  text-align: right;
+}
+.perfect-rug-right{
+  padding-right: 20px;
+}
+.custom-rug-form{
+padding: 80px 0px;
+}
+.custom-rug-form label{
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #AA8B57;
+  margin-top: 10px;
+}
+.custom-rug-form input{
+  background: #F5F2DF;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #AA8B57;
+  outline: none;
+}
+
+.custom-rug-btn{
+  font-family: "Ranade", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  fill:#ffffff !important;
+  color:#ffffff !important;
+  border:#AA8B57 !important;
+  background-color:#AA8B57 !important;
+  border-radius: 0px 0px 0px 0px !important;
+  padding: 6px 12px 6px 12px !important;
+  margin-top: 20px;
+}
+.form-control:focus {
+  box-shadow:none !important;
+  background: #F5F2DF;
+}
+.custom-rug-form h2{
+  color: #032D29;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.625rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  line-height: 110px;
+  text-align: center;
+}
+.custom-rug-form h6{
+  color: #032D29;
+  text-align: center;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 20px 0;
+  line-height: 29px;
+}
+.why-bespoke-rug {
+padding-bottom: 80px;
+}
+.why-bespoke-rug .row{
+  padding: 30px 0;
+}
+.why-bespoke-rug-content-right .why-bespoke-rug-content{
+  padding-right: 20px;
+}
+.why-bespoke-rug-content h3{
+ color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    line-height: 1.3em;
+}
+.why-bespoke-rug-content p{
+  color: #AA8B57;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  /* text-align: left; */
+  text-transform: lowercase;
+}
+.company-profile, .mission-statement{
+  padding: 30px 0;
+}
+.company-profile h3, .mission-statement h3{
+  color: #032D29;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.625rem;
+  font-weight: 300;
+  padding: 20px 0;
+  line-height: 77px;
+}
+.company-profile p,.mission-statement p,.our-artisans p{
+  color: #AA8B57;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: lowercase;
+}
+.aboutus-our-taem{
+  background: #AA8B57;
+  padding: 80px 0;
+}
+.our-team h5{
+  text-align: center;
+  color:#032D29;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 29px;
+}
+.our-team h3{
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 0;
+}
+.our-team h4{
+  color:#ffffff;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+}
+.our-team p{
+  color:#ffffff;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 28px;
+  padding-top: 10px;
+ 
+}
+.our-team img{
+  width: 150px;
+  text-align: center;
+  border-radius:50%;
+  display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.our-team-items{
+  padding-top: 40px;
+}
+.our-artisans{
+  padding: 80px 0;
+}
+.our-artisans h6{
+  color:#032D29;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+}
+.our-artisans h3{
+  color: #032D29;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    line-height: 77px;
+    text-align: center;
+}
+.rug-importance,.contact-us{
+  padding: 80px 0;
+}
+.rug-importance h4,.TermsandConditions h2{
+  color:#000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 70px; 
+  text-align: center;
+  
+}
+.TermsandConditions h2{
+  padding-bottom: 40px !important;
+}
+.rug-importance p,.TermsandConditions p{
+  text-align: center;
+    color: #AA8B57;
+    font-family: "Ranade", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+  
+}
+.TermsandConditions p{
+  text-align: left !important;
+}
+.rug-importance-content{
+  padding-top: 50px;
+}
+.rug-importance-content h5{
+  color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+.rug-importance-content p{
+  text-align: center;
+  color: #AA8B57;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding-top: 20px;
+
+}
+
+.rug-importance-content{
+  display: block !important;
+}
+.rug-importance-content img{
+  margin: 20px auto !important;
+  color: #AA8B57 !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+.rug-importance-content ul li{
+  font-family: "Ranade", Sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 30px;
+  list-style-type: disc;
+  color: #AA8B57 !important;
+}.accordion-button:not(.collapsed){
+  background: #F5F2DF !important;
+  box-shadow:none !important;
+}
+.accordion, .accordion-item,.accordion-button{
+  border:0 !important;
+  background: #F5F2DF !important;
+}
+.accordion-button:focus{
+  box-shadow:none !important;
+}
+.accordion-item .accordion-button:not(.collapsed)::after{
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/></svg>") !important;
+  background-size: 16px;
+  height: 16px;
+  width: 16px; 
+}
+.accordion-item .accordion-button::after {
+  
+background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/></svg>") !important;
+  transform: scale(.7);
+  display: block;
+  position: relative;
+  top: 0px;
+}
+
+.accordion-header{
+  font-family: "Ranade", Sans-serif !important;
+  font-size: 1.125rem  !important;
+  font-weight: 400  !important;
+  line-height: 29px  !important;
+}
+
+.accordion-body ,.TermsandConditions ol li{
+  color: #AA8B57 !important;
+    font-family: "Ranade", Sans-serif  !important;
+    font-weight: 300  !important;
+    font-size: 1rem  !important;
+}
+.accordion-button:not(.collapsed){
+  color: #000000 !important;
+}
+.TermsandConditions ol{
+
+list-style: lower-alpha ;
+}
+
+.TermsandConditions{
+  padding:80px 0;
+}
+.contact-us h3{
+  color: #032D29;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.625rem;
+  padding: 50px 0;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 70px; 
+  text-align: center;
+}
+.contact-us-content h4{
+  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+} 
+.list-group-item{
+  display: flex !important;
+  align-items: center !important;
+  background-color: #F5F2DF !important;
+  border: none !important;
+  color: #AA8B57 !important;
+  font-family: "Ranade", Sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.contact-us .form-control,.contact-us .dropdown-toggle{
+  background: #F5F2DF !important;
+  border: 1px solid #AA8B57 !important;
+  border-radius: 0 !important;
+  color: #AA8B57 !important;
+  width: 100% !important;
+}
+.contact-us .form-label{
+  color: #AA8B57;
+}
+.contact-us .dropdown-toggle::after{
+  margin-left: 8.255em !important;
+}
+.rug-importance-content ul li{
+  color: #AA8B57;
+  text-align: left;
+  font-weight: 300;
+  line-height: 30px;
+}
+.media{
+  padding: 100px 0;
+}
+.media h2{
+  color: #000000;
+  font-family: "ivypresto-display", Sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 70px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.media a{
+  color:#000000;
+  text-decoration: none;
+  text-align: center;
+}
+.media h6{
+  color:#000000;
+  font-family: "Ranade", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  padding-top: 20px;
+}
+.media h3{
+  color:#000000;
+  font-family: "Ranade", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-top: 10px;
+
+}
+.topmenu-items a{
+  color: #333 !important;
+  padding: 10px 20px;
+  margin: 0 !important;
+}
+.topmenu-items a:hover{
+font-weight: 700;
+  border: none !important;
+  color: #000051 !important;;
+}
+.bottommenu-items li a{
+  color: #333 !important;
+}
+.bottommenu-items a:hover{
+  font-weight: 700;
+    border: none !important;
+    color: #000051 !important;;
+  }
+  .header-btn-a {
+    letter-spacing: .1em;
+    line-height: normal;
+    text-transform: lowercase;
+    text-align: center;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    transition: background .2s, color .2s, border .2s, box-shadow .2s, fill .2s;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 17px 40px;
+    min-width: 200px;
+    box-shadow: 0 0 20px 2px rgba(0, 101, 189, .2);
+    background: #000777;
+    color: #fff;
+    fill: transparent;
+    border-color: transparent;
+}.social-link.slid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 16px !important;
+  margin-right: 20px;
+}.social-links {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+}.social-link:hover .social-links {
+  opacity: 1;
+  visibility: visible;
+  width: 80px;
+}
+.social-link.slid:hover .social-links {
+  margin-left: 30px;
+  max-width: 200px;
+}
