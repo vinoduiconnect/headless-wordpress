@@ -17,7 +17,7 @@ export default function Index({ allPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+        <title>{`Datatracks sample headless cms with ${CMS_NAME}`}</title>
       </Head>
       <Header />
       <Container>
