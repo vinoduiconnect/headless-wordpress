@@ -105,21 +105,29 @@
 /* Header css */
 .topmenu-items a{
   color: #333 !important;
-  padding: 10px 20px;
-  margin: 0 !important;
+  font-weight: 500;
+  font-size: 14px;
 }
 .topmenu-items a:hover{
-font-weight: 700;
+  font-weight: 500;
   border: none !important;
-  color: #000051 !important;;
+  color: #000051 !important;
 }
-.bottommenu-items li a{
+.bottom-header a{
   color: #333 !important;
+  font-size: 14px;
+  font-weight: 500;
 }
-.bottommenu-items a:hover{
-  font-weight: 700;
-    border: none !important;
-    color: #000051 !important;;
+.bottom-header a:hover{
+  font-weight: 500;
+  border: none !important;
+  color: #000051 !important;
+  }
+  .header-btn-a a:hover,.header-btn-a a{
+    color: #fff !important;
+  }
+  .header-btn-a:hover{
+    background-color: #003;
   }
   .header-btn-a {
     letter-spacing: .1em;
@@ -134,9 +142,9 @@ font-weight: 700;
     font-size: 13px;
     padding: 17px 40px;
     min-width: 200px;
-    box-shadow: 0 0 20px 2px rgba(0, 101, 189, .2);
+    /* box-shadow: 0 0 20px 2px rgba(0, 101, 189, .2); */
     background: #000777;
-    color: #fff;
+   
     fill: transparent;
     border-color: transparent;
 }.social-link.slid {
@@ -175,7 +183,10 @@ font-weight: 700;
 
 
 @media (max-width: 768px){
-  .topmenu-items,.bottommenu-items,.header-btn-a{
+.header-btn-a{
+    display: none;
+  }
+  .bottom-header-des{
     display: none;
   }
   img{

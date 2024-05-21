@@ -1,132 +1,85 @@
-import Link from "next/link";
-import Image from 'next/image';
-// import { FaFacebook, FaLinkedin, FaShareAlt } from 'react-icons/fa';
-// import { FaXTwitter } from 'react-icons/fa6';
-export default function Header() {
-  return (
-    <header className="bg-white mb-3 sticky w-full z-20 top-0 start-0 text-white pt-2">
-      {/* Top Menu */}
-      <div className="flex justify-between items-center px-4 " style={{
-        borderBottom: '1px solid #e7e7e7', borderTop: '1px solid #e7e7e7'
-      }}>
-        {/* Logo */}
-        <div className="flex items-center w-full justify-between pb-2">
-          <Link href="/" className="text-xl font-bold mr-4">
-            <Image src="/DTlogo-150x51.webp"
-              alt="DTlogo"
-              className="dark:invert"
-              width={150}
-              height={51}
-              priority
-            />
-          </Link>
-          <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-          <div className="flex items-center justify-end space-x-4 topmenu-items ">
-            <Link href="/">
-              US
-            </Link>
-            <Link href="/">
-              UK
-            </Link>
-            <Link href="/">
-              Ireland
-            </Link>
-            <Link href="/">
-              EU
-            </Link>
-            <Link href="/" >
-              Singapore
-            </Link>
-            <Link href="/" >
-              South Africa
-            </Link>
-            <Link href="/" >
-              Malaysia
-            </Link>
-            <Link href="/" >
-              India
-            </Link>
-            <Link href="/" >
-              CbCR
-            </Link>
-          
-            {/* Add other country links */}
-          </div>
-        </div>
-        {/* Top Menu Ends */}
+// src/components/Header.js
+import React, { useState } from 'react';
 
+const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-      </div>
-      {/* Social Media Icons and Email Text */}
-      <div className="flex justify-between items-center pl-4 bg-white-900">
-        {/* Bottom Menu */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-4 bottommenu-items">
-            <li>
-              <Link href="/" className=" active:text-blue-900 hover:text-gray-300 text-gray-300">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-gray-300">
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-gray-300">
-                CONTACT US
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        {/* Bottom Menu Ends */}
-        {/* Social Media Icons */}
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
-
-        {/* Email Text */}
-        <div className="flex items-center text-white ml-4 ">
-          <div className="social-link slid 
-         ">
-            {/* <FaShareAlt style={{color:'#111',}}/> */}
-            <div className="social-links">
-              <div className="flex justify-between gap-3">
-                <a href="https://www.linkedin.com/company/datatracks/" target="_blank" aria-label="Share on LinkedIn">
-              
-                  {/* <FaLinkedin style={{color:'#111',}}/> */}
-                </a>
-                <a href="https://twitter.com/datatracks" target="_blank" aria-label="Share on Twitter">
-                  
-                  {/* <FaXTwitter style={{color:'#111',}}/> */}
-                </a>
-                <a href="https://www.facebook.com/DataTracks/" target="_blank" aria-label="Share on Facebook">
-              {/* <FaFacebook style={{color:'#111',}}/> */}
-                </a>
-              </div>
+    return (
+        <header className="bg-white sticky w-full z-20 top-0 start-0">
+            <div className="mx-4 ">
+                <div className="flex justify-between items-center py-2">
+                    <div className="flex-shrink-0">
+                        <a href="/" className="text-xl font-bold">
+                            <img src="/DTlogo-150x51.webp" alt="Logo" className="h-auto w-auto" />
+                        </a>
+                    </div>
+                    <div className="hidden md:flex space-x-8 topmenu-items">
+                        <a href="#" className="text-gray-700 hover:text-gray-900">US</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">UK</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">Ireland</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">EU</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">Singapore</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">South Africa</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">Malaysia</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">India</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">CbCR</a>
+                    </div>
+                    <div className="md:hidden">
+                        <button onClick={toggleMenu} className="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        {isOpen ? (
+                                 <img src="/cancel.svg" alt="Logo" className="h-3 w-auto " />
+                            ) : (
+                              <img src="/humberger-icon.png" alt="Logo" className="h-4 w-auto mt-2" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+                {isOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-2 space-y-1 sm:px-3 topmenu-items">
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">US</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">UK</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">Ireland</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">EU</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">Singapore</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">South Africa</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">Malaysia</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">India</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">CbCR</a>
+                        </div>
+                    </div>
+                )}
+                <div className="flex justify-between items-center py-2 border-t -mx-4 bottom-header bottom-header-des">
+                    <div className="hidden md:flex space-x-8 ml-2">
+                        <a href="#" className="text-gray-700 hover:text-gray-900">HOME</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">ABOUT</a>
+                        <a href="#" className="text-gray-700 hover:text-gray-900">CONTACT US</a>
+                    </div>
+                    <div className="hidden md:flex items-center header-btn-a">
+                    <img src="/email-64.png" alt="Logo" className="h-3 w-auto pr-3" />
+                        <a href="mailto:enquiry@datatracks.com" className="text-white">enquiry@datatracks.com</a>
+                    </div>
+                </div>
+                {isOpen && (
+                    <div className="md:hidden h-screen bottom-header ">
+                        <div className="px-2 pt-2 pb-2 space-y-1 sm:px-3 border-t mt-2">
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">HOME</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">ABOUT</a>
+                            <a href="#" className="block text-gray-700 hover:text-gray-900">CONTACT US</a>
+                            <div className="flex items-center mt-4 header-btn-a">
+                            <img src="/email-64.png" alt="Logo" className="h-3 w-auto pr-3" />
+                                <a href="mailto:enquiry@datatracks.com" className="text-white">enquiry@datatracks.com</a>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
-          </div>
-        
-        {/* Insert Email Address */}
-        <div className="flex justify-between gap-5 header-btn-a">
-          <Image src="/email-64.png"
-            alt="DTlogo"
-            className="dark:invert"
-            width={18}
-            height={18}
-            priority
+        </header>
+    );
+};
 
-          />
-          <Link href="mailto:enquiry@datatracks.com" >
-            enquiry@datatracks.com
-          </Link>
-        </div>
-      </div>
-    </div>
-      {/* End of Social Media Icons and Email Text */ }
-    </header >
-  );
-}
+export default Header;
